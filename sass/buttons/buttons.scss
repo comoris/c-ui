@@ -1,0 +1,108 @@
+/** <h2 class="sg-h2">Buttons</h2> */
+
+/**
+ * Button sizes:
+ * `.btn--sm` <br>
+ * `.btn` <br>
+ * `.btn--lg` <br>
+ * `.btn--block` <br>
+ *
+ *     @example
+ *     button.btn.btn--sm
+ *       span button
+ *     button.btn
+ *       span button
+ *     button.btn.btn--lg
+ *       span button
+ *     button.btn.btn--block
+ *       span button
+ *
+ */
+
+// button-style mixin
+@mixin btn-style($color) {
+    background: $color;
+    box-shadow: 0 2px 0px 0 darken($color, 10%);
+    @include transition(all .15s ease);
+    transform: translateY(0px);
+    &:hover {
+        background: darken($color, 12%);
+        box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .25), 0 6px 16px 0 rgba(150, 150, 150, .15);
+        transform: translateY(-1px);
+    }
+}
+
+.btn {
+    @include btn-style($brand-primary);
+    display: inline-block;
+    vertical-align: top;
+    // margin: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    padding: .75rem 1.5rem;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer; // for use on div or a
+}
+// Modifiers
+.btn--sm {
+    font-size: .75rem;
+    padding: .5rem 1.25rem;
+}
+.btn--lg {
+    font-size: 1rem;
+    padding: 1rem 2.25rem;
+}
+.btn--block {
+    width: 100%;
+}
+
+/**
+ * Button Styles :
+ * `.btn--info` <br>
+ * `.btn--succes` <br>
+ * `.btn--alert` <br>
+ * `.btn--danger` <br>
+ * `.btn--disabled` <br>
+ *
+ *     @example
+ *     a.btn.btn--info
+ *       span info
+ *     a.btn.btn--succes
+ *       span succes
+ *     a.btn.btn--alert
+ *       span alert
+ *     a.btn.btn--danger
+ *       span danger
+ *     a.btn.btn--disabled
+ *       span disabled
+ */
+
+// Modifiers
+.btn--info {
+    @include btn-style($brand-info);
+}
+.btn--succes {
+    @include btn-style($brand-succes);
+}
+.btn--alert {
+    @include btn-style($brand-alert);
+}
+.btn--danger {
+    @include btn-style($brand-danger);
+}
+.btn--disabled,
+.btn--disabled:hover {
+    transform: translateY(0px);
+    background: lighten($brand-tertiairy, 20%);
+    box-shadow: 0 2px 0 0 darken(lighten($brand-tertiairy, 20%), 5%);
+    color: lighten($brand-tertiairy, 10%);
+    cursor: default;
+}

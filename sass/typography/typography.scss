@@ -1,0 +1,100 @@
+/** <h2 class="sg-h2">Typography</h2> */
+
+/**
+ * Headings:
+ * `.h1 .h2 .h3 .h4 .h5 .h6` - documentation on what your
+ * component is goes here. Markdown is encouraged.
+ *
+ *     @example
+ *     h1 H1 Innoveren. Inspireren. Bewegen. Verder denken.
+ *     h2 H2 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     h3 H3 Pelckmans is toonaangevend wat didactische concepten betreft
+ *     p Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     h4 Innoveren. Inspireren. Bewegen. Verder denken. H4
+ *     p Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     h5 Innoveren. Inspireren. Bewegen. Verder denken. H5
+ *     p Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     p Dit kan alleen dankzij de kritische geest, de creativiteit en de sterke innovatieve cultuur die heersen binnen het bedrijf, bij de uitgevers en in de auteursgroepen.
+ *     h6 Innoveren. Inspireren. Bewegen. Verder denken. H6
+ *     p Als uitgeverij die staat voor onderwijsvernieuwing houdt Pelckmans vinger aan de pols bij hedendaagse tendensen in de onderwijswereld. Pelckmans is toonaangevend wat didactische concepten betreft.
+ *     ul
+ *         li Item 1
+ *         li Item 2
+ *         li Item 3
+ *
+ */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $brand-secondary;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+// reset
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p { margin: 0; }
+
+// SCALE-BASE & SCALE-RATIO
+// more info about vertical rythm
+// https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm
+$sb: 1rem;
+$sr: 1.25;
+
+// set explicit line height
+$base-line-height: 1.3rem;
+$base-font-size: $sb;
+
+h1,
+.h1 {
+    font-size: $base-font-size * pow($sr, 5);
+    line-height: $base-line-height * 3;
+    margin-bottom: $base-line-height * 2;
+}
+h2,
+.h2 {
+    font-size: $base-font-size * pow($sr, 4);
+    line-height: $base-line-height * 2;
+    margin-bottom: $base-line-height * 2;
+}
+h3,
+.h3 {
+    font-size: $base-font-size * pow($sr, 3);
+    line-height: $base-line-height * 2;
+    margin-bottom: $base-line-height;
+}
+h4,
+.h4 {
+    font-size: $base-font-size * pow($sr, 2);
+    line-height: $base-line-height * 2;
+    margin-bottom: $base-line-height;
+}
+h5,
+.h5 {
+    font-size: $base-font-size * $sr;
+    line-height: $base-line-height;
+    margin-bottom: $base-line-height;
+}
+h6,
+.h6 {
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    margin-bottom: $base-line-height;
+}
+p {
+    font-size: $base-font-size;
+    margin-bottom: $base-line-height;
+    color: $brand-secondary;
+    //line-height: $base-line-height;
+    line-height: 1.5rem;
+}
+
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+    // list-style-type: none;
+}

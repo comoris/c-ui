@@ -1,0 +1,57 @@
+/** <h2 class="sg-h2">Colors</h2> */
+
+/**
+* Main Colors:
+* `$brand-primary` <br>
+* `$brand-secondary` <br>
+* `$brand-tertiairy` <br>
+*
+*     @example
+*     small brand-primary: #62B09F
+*     div.sg-colorbox.sg-col1
+*     small brand-secondary: #405868
+*     div.sg-colorbox.sg-col2
+*     small brand-tertiairy: #B2BCC6
+*     div.sg-colorbox.sg-col3
+*/
+
+/**
+* Secondary:
+* `$brand-success` <br>
+* `$brand-alert` <br>
+* `$brand-danger` <br>
+*
+*     @example
+*     small brand-succes: #53C1FA
+*     div.sg-colorbox.sg-col4
+*     small brand-alert: #FFD11C
+*     div.sg-colorbox.sg-col5
+*     small brand-danger: #FF0000
+*     div.sg-colorbox.sg-col6
+*/
+
+/**
+* Gradients:
+*
+*     @example
+*     small $brand-primary - $brand-secondary
+*     div.sg-colorbox.sg-grad1
+*/
+
+// Colors
+
+$brand-primary:   #62B09F;
+$brand-secondary: #405868;
+$brand-tertiairy: #B2BCC6;
+$brand-4: #F0F2F4;
+
+$brand-info: $brand-tertiairy;
+$brand-succes: #53C1FA;
+$brand-alert: #FFD11C;
+$brand-danger: #FF0000;
+
+// Breakpoints
+
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
