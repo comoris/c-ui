@@ -1,4 +1,4 @@
-# Pakket-p-ui
+# C-ui
 A custom-made, clean & minimal scss framework
 
 ```
